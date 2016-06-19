@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content='width="device-width",initial-scale="1.0"'/>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
+    <style>
+        body{
+            margin: 0px;
+        }
+        .box{
+            height: 150px;
+            width:25%;
+        }
+        .column-continer{
+            display: flex;
+            flex-wrap: wrap
+        }
+
+        .blue{
+            background-color: blue;
+        }
+        .yellow{
+            background-color:yellow ;
+        }
+        .green{
+            background-color: green;
+        }
+        .violet{
+            background-color:violet ;
+        }
+
+        @media screen and (max-width: 600px) {
+            .blue,.yellow{
+                width: 50%;
+            }
+            .green, .violet{
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            .column-continer{
+                width: 1000px;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .blue{
+                order: 4;
+            }
+            .yellow{
+                order: 3;
+            }
+            .green{
+                order: 2;
+            }
+            .violet{
+                order: 1;
+            }
+        }
+
+        .nav-open{
+            width: 250px !important;
+            position: absolute;
+            background-color: red;
+            transform: translate(-208px, 0);
+            transition: transform 1s ease;
+        }
+        .nav-bar1{
+            height: 100%;
+            position: absolute;
+            background-color: red;
+            width: 50px;
+        }
+        .nav-close{
+            position: absolute;
+            background-color: red;
+            width: 250px !important;
+            transform: translate(0, 0);
+            transition: transform 1s ease;
+        }
+    </style>
+
+    <script>
+        function showNav(){
+            if(document.getElementsByClassName('nav-close')[0])
+                document.getElementsByClassName('nav-bar1')[0].className = "nav-bar1 nav-open"
+            else
+                document.getElementsByClassName('nav-bar1')[0].className = "nav-bar1 nav-close"
+        }
+    </script>
+</head>
+<body>
+
+<nav class="nav-bar1">
+    <button class="btn btn-link pull-right" onclick="showNav()">
+        <span class="glyphicon glyphicon-menu-hamburger"></span>
+    </button>
+</nav>
+
+<div class="column-continer">
+    <div class="box blue"></div>
+    <div class="box yellow"></div>
+    <div class="box green"></div>
+    <div class="box violet"></div>
+</div>
+
+
+</body>
+</html>

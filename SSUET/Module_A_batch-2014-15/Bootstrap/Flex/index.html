@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content='width="device-width",initial-scale="1.0"'/>
+    <meta name="viewport" content='width="device-width", initial-scale="1.0"'/>
+    <meta name="viewport" content='width="device-width", initial-scale="1.0"'/>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 2em;
+        }
+        .box{
+            height: 200px;
+            width: 100%;
+        }
+
+        .blue{ background-color: blue; width: 100%;}
+        .red{ background-color: red; width: 33%;}
+        .yellow{background-color: yellow; width: 33%;}
+        .violet{background-color: violet; width: 34%;}
+        .green{background-color: green; width: 50%;}
+        .orange{background-color: orange; width: 50%;}
+
+        @media (max-width: 800px) and (min-width: 500px){
+            .blue{ background-color: blue; width: 100%; order: 5;}
+            .red{ background-color: red; width: 33%;order: 4;}
+            .yellow{background-color: yellow; width: 33%;order: 3;}
+            .violet{background-color: violet; width: 34%;order: 2;}
+            .green{background-color: green; width: 50%;order:1;}
+            .orange{background-color: orange; width: 50%;order: 0;}
+        }
+        .etc{
+            width: 500px;background-color: red; height: 100px;
+        }
+
+        @media screen and (max-width: 500px) {
+            .etc{
+                width: 200px;background-color: red; height: 100px;
+            }
+        }
+
+
+        .navBar{
+            height: 100%;
+            width: 50px;
+            background-color: brown;
+            position: absolute;
+        }
+        .navBar ul{
+            display: none;
+        }
+        .navOpen{
+            width: 250px !important;
+        }
+        .navOpen ul{
+            display: block;
+        }
+
+    </style>
+
+    <script>
+        function showNav(){
+
+            document.getElementsByClassName('navBar')[0].className="navBar navOpen"
+        }
+
+    </script>
+</head>
+<body style="margin: 0">
+
+<nav class="navBar" onclick="showNav()">
+    <ul>
+        <li>Menu Item</li>
+        <li>Menu Item</li>
+        <li>Menu Item</li>
+        <li>Menu Item</li>
+    </ul>
+</nav>
+<div class="container">
+    <div class="box blue">1</div>
+    <div class="box red">2</div>
+    <div class="box yellow">3</div>
+    <div class="box violet">4</div>
+    <div class="box green">5</div>
+    <div class="box orange">6</div>
+</div>
+
+</body>
+</html>

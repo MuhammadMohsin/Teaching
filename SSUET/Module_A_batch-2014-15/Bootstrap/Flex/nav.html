@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .main{
+            height: 500px;
+            width: 100%;
+            background-color: yellow;
+        }
+        .nav{
+            position: absolute;
+            width: 50px;
+            background-color: red;
+            height: 100%;
+        }
+
+        .nav ul{
+            display: none;
+        }
+        .nav button{
+            float: right;
+        }
+        .navOpen{
+            width: 250px;
+        }
+
+        .navOpen ul{
+            display: block;
+        }
+    </style>
+
+    <script>
+        function showNavbar() {
+            if(document.getElementsByClassName('navOpen')[0])
+                document.getElementsByClassName('nav')[0].className = 'nav'
+            else
+                document.getElementsByClassName('nav')[0].className = 'nav navOpen'
+        }
+    </script>
+</head>
+<body>
+
+<nav class="nav">
+    <button onclick="showNavbar()">|||</button>
+    <ul>
+        <li>Item </li>
+        <li>Item </li>
+        <li>Item </li>
+        <li>Item </li>
+    </ul>
+</nav>
+
+<div class="main"></div>
+</body>
+</html>
