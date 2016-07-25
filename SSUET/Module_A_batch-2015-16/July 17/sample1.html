@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Sample 1 </title>
+</head>
+<body>
+	<form action="https://www.google.com" method="get">
+
+		<p> Enter user name <br/>
+		  <input type="text" name="username" size="10" />
+		</p>
+
+		<p> Enter password <br/>
+		  <input type="password" name="userpass" maxlength="8"/>
+		</p>	
+
+		<p> Select Gender <br/>
+		  <input type="radio" name="gender" 
+			value="male" checked="checked" /> Male
+		  
+		  <input type="radio" name="gender" 
+			value="female"/> Female
+		</p>
+
+		<p> Select your favourite subjects <br/>
+
+		  <input type="checkbox" name="subject" 
+			value="html" checked="checked"/> HTML
+		<br/>
+		  <input type="checkbox" name="subject"
+			value="css" /> CSS
+		<br/>
+		  <input type="checkbox" name="subject"
+			value="js" /> JavaScript	
+		</p>	
+
+		<p> What device do you listen to music on?
+			<select name="device" 
+				multiple="multiple" size="3">
+			  <option value="ipod"> ipod</option> 
+			  <option value="mobile"> Mobile</option>
+			  <option value="radio"> Radio</option>
+			  <option value="mp3" selected="selected"> mp3</option>
+			  <option value="fm"> Fm</option>
+			  <option value="laptop"> Laptop</option>
+			</select>
+		</p>	
+
+		<p> Enter comments <br/>
+		  <textarea cols="50" rows="5"> </textarea>
+		</p>
+
+		<input type="submit" name="submit" value="save" />	
+	</form>
+
+</body>
+</html>
